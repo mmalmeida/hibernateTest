@@ -53,14 +53,14 @@ public class Location {
 		this.code = code;
 	}
 	
-	public void addTrial(ClinicalTrial trial) {
+	public void addTrial(Trial trial) {
 		if(trial == null){
 			return;
 		}
 		trial.getLocations().add(this);		
 	}
 	
-	public boolean removeTrial(ClinicalTrial trial) {
+	public boolean removeTrial(Trial trial) {
 		if(trial != null && trial.getLocations() != null){
 			boolean removed = trial.getLocations().remove(this);
 			return removed;
