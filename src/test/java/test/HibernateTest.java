@@ -1,7 +1,7 @@
 package test;
 
-import hibernateTest.Trial;
 import hibernateTest.Location;
+import hibernateTest.Trial;
 
 import org.junit.Test;
 
@@ -32,14 +32,14 @@ public class HibernateTest extends HibernateAbstractTest {
 	 */
 	private Trial setUp() {
 		Location location = new Location("name", "code");
-		saveOrUpdate(location);
+		save(location);
 		Trial trial = new Trial();
 		location.addTrial(trial);
-		saveOrUpdate(trial);
+		save(trial);
 		getSession().createCriteria(Location.class).list();
 		location.setCode("other");
-		getSession().saveOrUpdate(location);
-		saveOrUpdate(trial);
+		getSession().update(location);
+		update(trial);
 		return trial;
 	}
 	

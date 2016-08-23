@@ -1,7 +1,5 @@
 package test;
 
-import java.io.Serializable;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.runner.RunWith;
@@ -30,10 +28,11 @@ public abstract class HibernateAbstractTest extends AbstractTransactionalJUnit4S
 		return sessionFactory.getCurrentSession();
 	}
 	
-	public Serializable saveOrUpdate(Object object){
-		Session session = sessionFactory.getCurrentSession();
-		Serializable id = session.save(object);
-		return id;
+	public void save(Object object){
+		getSession().save(object);
 	}
 	
+	public void update(Object object){
+		getSession().update(object);
+	}
 }
