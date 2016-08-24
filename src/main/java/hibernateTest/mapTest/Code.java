@@ -23,7 +23,7 @@ public class Code {
 
 	@ElementCollection(targetClass = CodeValue.class)
 	@MapKeyClass(CodeProperty.class)
-	@JoinTable(name = "code_properties")
+	@JoinTable(name = "code_properties", schema="clinical")
 	private Map<CodeProperty, CodeValue> propertiesMap = new HashMap<CodeProperty, CodeValue>();
 
 	public int getId() {
