@@ -18,11 +18,13 @@
 		<property name="packagesToScan">
 			<list>
 				<value>hibernateTest</value>
+				<value>hibernateTest.mapTest</value>
 			</list>
 		</property>
 		<property name="annotatedPackages">
 			<list>
 				<value>hibernateTest</value>
+				
 			</list>
 		</property>
 		<property name="dataSource" ref="c3p0DataSource" />

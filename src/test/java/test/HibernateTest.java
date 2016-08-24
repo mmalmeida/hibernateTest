@@ -1,17 +1,17 @@
 package test;
 
+import org.junit.Test;
+
 import hibernateTest.Location;
 import hibernateTest.Trial;
 
-import org.junit.Test;
-
 public class HibernateTest extends HibernateAbstractTest {
 
-	@Test
-	public void failedTest() {
-		setUp();
-		getSession().createCriteria(Location.class).list();
-	}
+//	@Test
+//	public void failedTest() {
+//		setUp();
+//		getSession().createCriteria(Location.class).list();
+//	}
 	
 	@Test
 	public void refreshTest() {
